@@ -25,11 +25,11 @@ def signupuser(request):
                 return redirect('currenttodos')
             except IntegrityError:
                 return render(request, 'todo/signupuser.html',
-                              {'form': UserCreationForm, 'error': 'That username had already been taken.'})
+                              {'form': UserCreationForm, 'error': 'Это имя пользователя уже занято.'})
 
         else:
             return render(request, 'todo/signupuser.html',
-                          {'form': UserCreationForm, 'error': 'Password did not match.'})
+                          {'form': UserCreationForm, 'error': 'Пароли не совпадают. Попробуйте еще раз.'})
 
 
 def loginuser(request):
@@ -39,7 +39,7 @@ def loginuser(request):
         user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
         if user is None:
             return render(request, 'todo/loginuser.html',
-                          {'form': AuthenticationForm(), 'error': 'Username or password did not match'})
+                          {'form': AuthenticationForm(), 'error': 'Пароль или имя пользователя не совпадают'})
         else:
             login(request, user)
             return redirect('currenttodos')
