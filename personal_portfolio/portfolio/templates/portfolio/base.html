@@ -14,15 +14,17 @@
 
   <link rel="icon" type="image/png" href="{% static "portfolio/logo.png" %}">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+
   <title>Vladislav Kulakov</title>
 </head>
 
 <body>
-  <nav id="topNav" class="navbar navbar-expand-md navbar-light">
+  <nav id="topNav" class="navbar navbar-expand-md navbar-light" style="background-color: rgb(60, 60, 60);">
     <div class="container">
       <a class="navbar-brand" href="{% url 'home' %}">
         <img src="{% static "portfolio/logo.png" %}" width="30" height="30" class="d-inline-block align-top" alt="Nick's Logo">
-        <span>Vladislav Kulakov</span>
+        <span class="myColor">Vladislav Kulakov</span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,13 +32,19 @@
       <div class="collapse navbar-collapse text-center" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{% static "portfolio/resume.pdf" %}">Resume</a>
+            <a class="nav-link" href="{% static "portfolio/resume.pdf" %}"><i class="bi-file-earmark-person" style="font-size:25px"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://vk.com/kulakovvladiss" target="_blank">VK</a>
+            <a class="nav-link" href="https://github.com/VladissKul" target="_blank"><i class="bi-github" style="font-size:25px"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:vladislav.kulakov.2002@mail.ru" target="_blank"><i class="bi-envelope" style="font-size:25px"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://t.me/Vlad_iss" target="_blank"><i class="bi-telegram" style="font-size:25px"></i></a>
           </li>
           <li>
-            <a class="nav-link" href="{% url 'blog:all_blogs' %}" target="_blank">Blog</a>
+            <a class="nav-link" href="{% url 'blog:all_blogs' %}" target="_blank">Блог</a>
           </li>
         </ul>
       </div>

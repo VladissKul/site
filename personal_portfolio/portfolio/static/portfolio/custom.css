@@ -1,13 +1,15 @@
 .navbar-nav .nav-link {
-    color: rgba(0,0,0,1) !important;
+    color: rgba(255,255,255,1) !important;
 }
 
 .navbar-nav .nav-link:hover {
-    color: rgba(0,0,0,.5) !important;
+    color: rgba(255,0,0,.5) !important;
 }
+
 
 body {
     font-family: 'Lato', sans-serif;
+    #background: url("/static/portfolio/abs.png") 50% 0 no-repeat fixed;
 }
 
 #blogtitle {
@@ -22,3 +24,9 @@ body {
         font-size: 5rem;
     }
 }
+
+.myColor
+{
+    color:white;
+}
+
