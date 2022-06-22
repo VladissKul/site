@@ -2,18 +2,18 @@
 {% block content %}
 {% load static %}
 
-<h1 id="blogtitle" class="font-weight-bold text-center">Blog</h1>
+<h1 id="blogtitle" class="font-weight-bold text-center" style="font-size:50px">Блог</h1>
 
-<h3 class="text-center mb-5">Nick has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h3>
+<!-- <h3 class="text-center mb-5">Было написано {{ blogs.count }} блог{{ blogs.count|pluralize }}</h3> -->
 
 {% for blog in blogs %}
 <div class="row justify-content-center my-3">
     <div class="col-md-10">
         <a href="{% url 'blog:detail' blog.id %}">
-            <h2>{{ blog.title }}</h2>
+            <h2 style="font-size:28px">{{ blog.title }}</h2>
         </a>
-        <h5 class="text-muted">{{ blog.date|date:'M d Y'|upper }}</h5>
-        <h4>{{ blog.description|striptags|truncatechars:100 }}</h4>
+        <h5 class="text-muted" style="font-size:15px">{{ blog.date|date:'M d Y'|upper }}</h5>
+        <h4 style="font-size:20px">{{ blog.description|striptags|truncatechars:100 }}</h4>
     </div>
 </div>
 {% endfor %}
